@@ -1,21 +1,25 @@
-#ifndef RUFF_H
-#define RUFF_H
+#ifndef _PRINTF_H
+#define _PRINTF_H
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
 /**
  * struct function - structure
  * @name: char
  * @age: float
  * @owner: char
  */
-struct dog
+struct printf
 {
         char 
         float 
-        char 
+        double 
 };
 /**
- * function printf - Type definition for struct dog
+ * function printf - Type definition for struct printf
  */
-typedef struct function printf;
+typedef struct printf;
 int _printf(const char *format, ...);
 int _putchar(char c);
 #endif
