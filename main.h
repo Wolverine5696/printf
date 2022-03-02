@@ -1,25 +1,28 @@
-#ifndef _PRINTF_H
-#define _PRINTF_H
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
 /**
- * struct function - structure
- * @name: char
- * @age: float
- * @owner: char
+ * struct specify - struct to specifiers
+ * @str: string of a special char
+ * @func: function associated with the special char
  */
-struct printf
+typedef struct specify
 {
-        char 
-        float 
-        double 
-};
-/**
- * function printf - Type definition for struct printf
- */
-typedef struct printf;
+	char *str
+	int (*func)(va_list);
+} string;
+/* printf function*/
 int _printf(const char *format, ...);
 int _putchar(char c);
+
+/* specifiers */
+int print_c
+int print_s
+int print_d
+int print_i
+
+
 #endif
