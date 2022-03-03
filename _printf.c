@@ -34,7 +34,11 @@ int printf(const char *format, ...)
 	{
 		for (j = 0; f_list[j].sym != NULL; j++)
 		{
-			if r_val = f_list[j].f(args);
+	r_val = f_list[j].f(args);
+	if (r_val == -1)
+	return(-1);
+	charo += r_val;
+	break;
 		}
 	}
 }
