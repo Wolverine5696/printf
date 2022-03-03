@@ -7,11 +7,13 @@ int _printf(const char * format, ...)
 Prints ARGUMENT(s) based on FORMAT
 
 If the format includes (%) format specifiers. The arguments are adjusted accordingly, given the specifier utilized in the function.
-
 _printf will take an indefinite amount of arguments given the function is a structrued data type.
 
+.B Return Value
+with success, the return value will return the number of characters printed (except the null byte) given the format of the function.
+
 Example:
-_printf(%c, text);
+_printf("%c", text);
 
 The example above uses a conversion specifier of the format of the text.
 
