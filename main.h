@@ -18,8 +18,8 @@ typedef struct list
 
 /* printf function*/
 int _printf(const char *format, ...);
-int selector(int *i, const char *format, va_list x);
-
+int selector(const char *str, int *ptr_i, int y, va_list variables);
+int _strlen(char *s);
 int _putchar(char c); /*stdout*/
 
 /*character functions*/
@@ -28,7 +28,6 @@ int str_string(va_list s);
 int str_percent(va_list __attribute__((unused)) p); /* print_% */
 int str_num(va_list arg); /*print integers*/
 
-int _strlen(char *s);
 int _strcmp(char s1, char *s2);
 int _prnthex(va_list *args);
 
