@@ -1,3 +1,7 @@
+#include "main.h"
+#include <sdarg.h>
+#include <stddef.h>
+#include <unistd.h>
 /**
  * _printf - the function
  * @format: a list of arguments
@@ -7,29 +11,27 @@
  */
 int printf(const char *format, ...)
 {
-	va_list yz;
-	int x = 0; count = 0;
+	int x;
+	va_list yz; 
 
 	va_start(x, format);
 	
-	if (!format || format[x] == '\n' || format[x] == '\0' ||
-			(format[x] == '%' && !format[x + 1]))
+	x = charsformats(format, yz);
 	{
-		return (-1);
-	}
 	
-	while (format && format[x]);
+		int i, j, charo, r_val
+	fmtsspecifier f_list[] = {
+		{"c", _char},
+		{"s", _string},
+		{"%", _percent},
+		{"d", _integer},
+		{"i", _integer}
+	};
+	chars = 0;
+	for (i = 0; format[i] != '\0'; i++ )
 	{
-		if (format[x] == '%')
-		{
-			count += selector(&x, format, yz);
-		}
-		else
-		{
-			_putchar(format[x]);
-		}
-		x++;
+	if (format[i] -- '%' )
+	{
+		for (j = 0; f_list)
 	}
-	va_end(yx);
-	return (count);
 }
