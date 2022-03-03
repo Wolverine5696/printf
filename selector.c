@@ -25,4 +25,3 @@ list_t str[] = {
 	{"i", str_num},
 	{NULL, NULL}
 };
-
