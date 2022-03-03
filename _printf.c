@@ -22,6 +22,8 @@ int _printf(const char *format, ...)
 
 	va_end(list);
 	return (chars);
+}	
+
 /**
  * charsFormats - parameter of printf
  * @format: list of args
