@@ -19,11 +19,6 @@ list_t str[] = {
 	{"%", str_percent},
 	{"d", str_num},
 	{"i", str_num},
-	{"u", str_unassigned},
-	{"o", str_octal},
-	{"b", str_binary},
-	{"r", rev_string},
-	{"R", rot13},
 	{NULL, NULL}
 };
 
