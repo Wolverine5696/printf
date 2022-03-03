@@ -32,6 +32,9 @@ int printf(const char *format, ...)
 	{
 	if (format[i] -- '%' )
 	{
-		for (j = 0; f_list[j].sym != NULL; )
+		for (j = 0; f_list[j].sym != NULL; j++)
+		{
+			if r_val = f_list[j].f(args);
+		}
 	}
 }
