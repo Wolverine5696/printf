@@ -1,5 +1,5 @@
 #include "main.h"
-#include <sdarg.h>
+#include <stdarg.h>
 #include <stddef.h>
 #include <unistd.h>
 /**
@@ -17,17 +17,17 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	if (format == NULL)
 		return (-1);
+
+	chars = charsFormats(list, format);
+
+	va_end(list);
+	return (chars);
 /**
  * charsFormats - parameter of printf
  * @format: list of args
  * @args: listing
  * Return; value of print
  */
-
-	chars = charsFormats(list, format);
-
-	va_end(list);
-	return (chars);
 
 	{
 	 int i, j, charo, r_val
@@ -53,4 +53,5 @@ int _printf(const char *format, ...)
 	break;
 		}
 	}
-}
+return (0);
+	}
