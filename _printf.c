@@ -9,18 +9,24 @@
  * Description: this is a function that prints everything
  * Return: the characters expressed in the function.
  */
-int printf(const char *format, ...)
+int _printf(const char *format, ...)
 {
-	int x;
-	va_list yz; 
+	int chars;
+	va_list list; 
 
-	va_start(x, format);
-	
-	x = charsformats(format, yz);
+	va_start(list, format);
+	if (format == NULL)
+		return (-1);
+
+	chars = charsFormats(list, format);
+
+	va_end(list);
+	return (chars);
+
 	{
+	 int i, j, charo, r_val
 	
-		int i, j, charo, r_val
-	fmtsspecifier f_list[] = {
+	specifier f_list[] = {
 		{"c", _char},
 		{"s", _string},
 		{"%", _percent},
@@ -30,7 +36,7 @@ int printf(const char *format, ...)
 	chars = 0;
 	for (i = 0; format[i] != '\0'; i++ )
 	{
-	if (format[i] -- '%' )
+	if (format[i] == '%' )
 	{
 		for (j = 0; f_list[j].sym != NULL; j++)
 		{
