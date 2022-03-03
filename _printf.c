@@ -17,6 +17,12 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	if (format == NULL)
 		return (-1);
+/**
+ * charsFormats - parameter of printf
+ * @format: list of args
+ * @args: listing
+ * Return; value of print
+ */
 
 	chars = charsFormats(list, format);
 
