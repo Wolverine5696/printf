@@ -49,7 +49,7 @@ int charsFormats(const char *format, va_list args)
 	r_val = f_list[j].f(args);
 	if (r_val == -1)
 	return(-1);
-	charo += r_val;
+	chars += r_val;
 	break;
 		}
 	}
