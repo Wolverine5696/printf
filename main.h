@@ -36,7 +36,7 @@ int str_binary(va_list a);
 int str_float(va_list a);
 int str_unassigned(va_list arg);
 int str_octal(va_list p);
-void rev_string(char *s)
+int rev_string(va_list p);
 int _pow(int x, int y);
 void rev_string(char *s);
 /* ??? */
