@@ -32,6 +32,6 @@ int printf(const char *format, ...)
 	{
 	if (format[i] -- '%' )
 	{
-		for (j = 0; f_list)
+		for (j = 0; f_list[j].sym != NULL; )
 	}
 }
