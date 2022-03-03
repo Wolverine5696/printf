@@ -10,23 +10,23 @@
  * @op: string of a special char
  * @f: function of special char
  */
-typedef struct list
+typedef struct formats
 {
-	char *op
-	int (*f)(va_list p);
-} list_t;
+	char *sym;
+	int (*f)(va_list);
+} specifier;
 
 /* printf function*/
 int _printf(const char *format, ...);
-int selector(const char *str, int *ptr_i, int y, va_list variables);
+int charsFormats(const char *format, va_list args);
 int _strlen(char *s);
 int _putchar(char c); /*stdout*/
 
 /*character functions*/
-int str_char(va_list c);
-int str_string(va_list s);
-int str_percent(va_list __attribute__((unused)) p); /* print_% */
-int str_num(va_list arg); /*print integers*/
+int _char(va_list c);
+int _string(va_list s);
+int _percent(va_list list); /* print_% */
+int _int(va_list arg); /*print integers*/
 
 int _strcmp(char s1, char *s2);
 int _prnthex(va_list *args);
