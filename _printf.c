@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
  */
 int charsFormats(const char *format, va_list args)
 	{
-	 int i, j, charo, r_val
+	 int i, j, chars, r_val;
 	
 	specifier f_list[] = {
 		{"c", _char},
