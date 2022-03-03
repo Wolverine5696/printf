@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
  * @args: listing
  * Return; value of print
  */
-
+int charsFormats(const char *format, va_list args)
 	{
 	 int i, j, charo, r_val
 	
