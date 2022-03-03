@@ -26,3 +26,15 @@ list_t str[] = {
 	{"R", rot13},
 	{NULL, NULL}
 };
+
+int c = 0;
+
+while (c < 10)
+{
+	if (*(str[c].op) == format[y + 1])
+	{
+		count += str[c].f(x);
+		count++
+	}
+	return (count);
+}
