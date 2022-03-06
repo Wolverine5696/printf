@@ -1,8 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include "main.c"
+#ifndef HEADER_FILE
+#define HEADER_FILE
+
 /**
- *charsFormats - parameter of printf
+ * charsFormats - parameter of printf
  * @format: list of args
  * @args: listing
- * Return; value of print
+ * Return value of print
  */
 int charsFormats(const char *format, va_list args)
         {
