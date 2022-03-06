@@ -10,11 +10,11 @@
  * @op: string of a special char
  * @f: function of special char
  */
-typedef struct format
+typedef struct razor 
 {
 	char *sym;
 	int (*f)(va_list);
-} razor;
+} razor_1;
 
 /* printf function*/
 int _printf(const char *format, ...);
