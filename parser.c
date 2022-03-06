@@ -22,7 +22,7 @@ int parser(const char *format, razor f_list[], va_list shark)
 			{
 				if (format[i + 1] == f_list[j].sym[0])
 		                                                                                                                                                                                                              					{
-					r_val = f_list[j].f(arg_list);
+					r_val = f_list[j].f(shark);
 					if (r_val == -1)
 						return (-1);
 					printall += r_val;
