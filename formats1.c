@@ -1,9 +1,7 @@
-#include <stdio.h>
-#include <stdargs.h>
 #include "main.h"
 
 /**
- * _printf - prints the main string and the 2 integers
+ * _printf - prints the main string and the all the integers
  *
  * @format: string with the named characters
  * Return: characters printed
@@ -11,19 +9,22 @@
 
 int _printf(const char *format, ...)
 {
-	int printed_list;
-	razor_1 f_list[] = {
-		{"d", print_integer},
-		{"i", print_integer},
-		{NULL, NULL}
+	int printall
+	razor f_list[] = {
+	{"c", print_char},
+	{"s", print_string},
+	{"%", print_percent},
+	{"d", print_integer},
+	{"i", print_integer},
+	{NULL, NULL}
 	};
-	va_list backwards;
+	va_list shark;
 
 	if (format == NULL)
 		return (-1)
 
-	va_start(backwards, format);
-	printed_list = parser(format, f_list, backwards);
-	va_end(backwards);
-	return (printed_list);
+	va_start(shark, format);
+	printall = parser(format, f_list, shark);
+	va_end(shark);
+	return (printall);
 }
