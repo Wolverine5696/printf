@@ -55,6 +55,5 @@ int charsFormats(const char *format, va_list args)
 	break;
 		}
 	}
-return (0);
-	}
+return (0);	
 	}
