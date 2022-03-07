@@ -1,5 +1,6 @@
 #ifndef PRINT_F
 #define PRINT_F
+
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -12,18 +13,20 @@
  * _percent: utilizes percent
  */
 
-typedef struct razor
+struct razor
 {
 	char *sym;
 	int (*f)(va_list);
-} razor_1;
+};
+typedef struct razor razor_1;
 
 /* printf function*/
-int parser(const char *format, razor1 f_list[], va_list blue);
+int parser(const char *format, razor_1 f_list[], va_list blue);
 int _printf(const char *format, ...);
 int charsFormats(const char *format, va_list);
 int _strlen(char *s);
 int _putchar(char c); /*stdout*/
+int get_func(char next, va_list arg);
 
 /*character functions*/
 int _write_char(char);
