@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdargs.h>
+#include <stdarg.h>
 #include "main.h"
 
 /**
@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 	va_list backwards;
 
 	if (format == NULL)
-		return (-1)
+		return (-1);
 
 	va_start(backwards, format);
 	printed_list = parser(format, f_list, backwards);

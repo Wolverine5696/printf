@@ -19,7 +19,7 @@ typedef struct razor
 } razor_1;
 
 /* printf function*/
-int parser(const char *format, razor1 f_list[], va_list blue);
+int parser(const char *format, razor_1 f_list[], va_list blue);
 int _printf(const char *format, ...);
 int charsFormats(const char *format, va_list);
 int _strlen(char *s);
