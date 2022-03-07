@@ -6,7 +6,6 @@
  * @format: string with the named characters
  * Return: characters printed
  */
-
 int _printf(const char *format, ...)
 {
 	int printall;
