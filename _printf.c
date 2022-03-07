@@ -12,7 +12,7 @@
 int _printf(const char *format, ...)
 {
 	int chars;
-	va_list list; 
+	va_list list;
 
 	va_start(list, format);
 	if (format == NULL)
@@ -22,18 +22,18 @@ int _printf(const char *format, ...)
 
 	va_end(list);
 	return (chars);
-}	
+}
 
 /**
  * charsFormats - parameter of printf
  * @format: list of args
  * @args: listing
- * Return; value of print
+ * Return: value of print
  */
 int charsFormats(const char *format, va_list args)
 	{
-	 int i, j, chars, r_val;
-	
+	int i, j, chars, r_val;
+
 	specifier f_list[] = {
 		{"c", _char},
 		{"s", _string},
@@ -42,15 +42,15 @@ int charsFormats(const char *format, va_list args)
 		{"i", _integer}
 	};
 	chars = 0;
-	for (i = 0; format[i] != '\0'; i++ )
+	for (i = 0; format[i] != '\0'; i++)
 	{
-	if (format[i] == '%' )
+	if (format[i] == '%')
 	{
-		for (j = 0; f_list[j].sym != NULL; j++)
+	for (j = 0; f_list[j].sym != NULL; j++)
 		{
 	r_val = f_list[j].f(args);
 	if (r_val == -1)
-	return(-1);
+	return (-1);
 	chars += r_val;
 	break;
 		}
