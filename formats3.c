@@ -9,7 +9,7 @@ int get_func(char next, va_list arg)
 {
 	int i;
 
-	flag_list[] = {
+	flag functs[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
