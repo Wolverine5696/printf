@@ -8,6 +8,7 @@
 int get_func(char next, va_list arg)
 {
 	int i;
+	int j[5];
 
 	get_func[j] = {
 		{"c", print_char},
