@@ -6,7 +6,6 @@
  * @format: string with the named characters
  * Return: characters printed
  */
-
 int _printf(const char *format, ...)
 {
 	int printall
@@ -21,7 +20,7 @@ int _printf(const char *format, ...)
 	va_list shark;
 
 	if (format == NULL)
-		return (-1)
+		return (-1);
 
 	va_start(shark, format);
 	printall = parser(format, f_list, shark);

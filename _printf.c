@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	int chars;
 	va_list list;
 
-	va_start(list, format);
+	va_start(list, *format);
 	if (format == NULL)
 		return (-1);
 
@@ -56,4 +56,5 @@ int charsFormats(const char *format, va_list args)
 		}
 	}
 return (0);
+	}
 	}

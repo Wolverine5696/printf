@@ -6,7 +6,6 @@
 
 /**
  * struct ranger - defines a structure for symbols and functions
- *
  * @sym: The operator
  * @f: The function associated
  */
@@ -17,8 +16,16 @@ struct ranger
 	int (*f)(va_list);
 };
 typedef struct ranger range_r;
+/**
+ * struct razor - devines a structure for symbols and functions
+ * @sym: the oporator
+ * @f: the function
+ * _putchar: prints a single character in a string/array
+ * _int: prints integer
+ * _percent: utilizes percent
+ */
 
-typedef struct razor 
+typedef struct razor
 {
 	char *sym;
 	int (*f)(va_list);
@@ -28,7 +35,7 @@ typedef struct razor
 /* printf function*/
 int parser(const char *format, range_r f_list[], va_list razor);
 int _printf(const char *format, ...);
-int charsFormats(const char *format, va_list blue);
+int charsFormats(const char *format, va_list);
 int _strlen(char *s);
 int _putchar(char c); /*stdout*/
 
