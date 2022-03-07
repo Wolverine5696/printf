@@ -10,21 +10,21 @@
  * @sym: The operator
  * @f: The function associated
  */
-<<<<<<< HEAD
+
 struct ranger
 {
 	char *sym;
 	int (*f)(va_list);
 };
 typedef struct ranger range_r;
-=======
+
 typedef struct razor 
 {
 	char *sym;
 	int (*f)(va_list);
 } razor_1;
 
->>>>>>> 7b832002ffb58311e5669b2afd64f24df4d69d24
+
 /* printf function*/
 int parser(const char *format, range_r f_list[], va_list razor);
 int _printf(const char *format, ...);
