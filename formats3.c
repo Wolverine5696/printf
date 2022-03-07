@@ -18,9 +18,9 @@ int get_func(char next, va_list arg)
 		{NULL, NULL}
 	};
 
-	for (i = 0; list[i].mod != NULL; i++)
+	for (i = 0; functs[i].mod != NULL; i++)
 	{
-		if (list[i].mod[0] == next)
+		if (functs[i].mod[0] == next)
 			return (list[i].f(arg));
 	}
 	return (0);
