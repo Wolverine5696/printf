@@ -8,7 +8,6 @@
 int get_func(char next, va_list arg)
 {
 	int i;
-	int array[2] = {d, i};
 	char array[3] = {c, s, % };
 
 		get_func[j] = {
