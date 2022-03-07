@@ -9,7 +9,7 @@ int get_func(char next, va_list arg)
 {
 	int i;
 
-	get_func[] = {
+	get_func[j] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"%", print_percent},
@@ -18,10 +18,10 @@ int get_func(char next, va_list arg)
 		{NULL, NULL}
 	};
 
-	for (i = 0; get_func[].mod != NULL; i++)
+	for (i = 0; get_func[j].mod != NULL; i++)
 	{
-		if (get_func[].mod[0] == next)
-			return (get_func[].f(arg));
+		if (get_func[j].mod[0] == next)
+			return (get_func[j].f(arg));
 	}
 	return (0);
 }
