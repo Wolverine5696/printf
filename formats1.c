@@ -9,8 +9,8 @@
 
 int _printf(const char *format, ...)
 {
-	int printall
-	razor f_list[] = {
+	int printall;
+	razor1 f_list[] = {
 	{"c", print_char},
 	{"s", print_string},
 	{"%", print_percent},
@@ -18,13 +18,13 @@ int _printf(const char *format, ...)
 	{"i", print_integer},
 	{NULL, NULL}
 	};
-	va_list shark;
+	va_list blue;
 
 	if (format == NULL)
-		return (-1)
+		return (-1);
 
-	va_start(shark, format);
-	printall = parser(format, f_list, shark);
-	va_end(shark);
+	va_start(blue, format);
+	printall = parser(format, f_list, blue);
+	va_end(blue);
 	return (printall);
 }
