@@ -8,7 +8,7 @@
 int get_func(char next, va_list arg)
 {
 	int i;
-	int array[3] = j
+	int array[2] = {d, i};
 
 	get_func[j] = {
 		{"d", print_integer},
