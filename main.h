@@ -27,7 +27,7 @@ int _printf(const char *format, ...);
 int charsFormats(const char *format, va_list);
 int _strlen(char *s);
 int _putchar(char c); /*stdout*/
-int get_func(char next, va_list arg);
+int functio_n(char red, va_list plist);
 
 /*character functions*/
 int _write_char(char);
