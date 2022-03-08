@@ -1,14 +1,14 @@
 #include "main.h"
 /**
- * get_func - gets the function
- * @arg: format
- * @next: next
+ * functio_n - gets the function
+ * @red: format
+ * @plist: next
  * Return: function that prints the function
  */
 int functio_n(char red, va_list plist)
 {
 	int i;
-	char array[3] = {c, s, % };
+	char array[3] = {c, s, %};
 
 		functio_n[j] = {
 		{"c", print_char},
