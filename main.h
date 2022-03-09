@@ -14,18 +14,22 @@
  * _percent: utilizes percent
  */
 
-struct razor
+typedef struct print
 {
-	char *sym;
+	char *spec;
 	int (*f)(va_list);
-};
-typedef struct razor razor_1;
+} specifier;
+
+int _putchar(char c);
+int _printf(const char *format, ...);
+int print_char(va_list c);
+int print_string(va_list s);
+int print_int(va_list i);
 
 /* printf function*/
-int parser(const char *format, razor_1 f_list[], va_list blue);
+
 int _printf(const char *format, ...);
-int charsFormats(const char *format, va_list);
-int _strlen(char *s);
+int (*specifier(const char *format))(va_list);
 int _putchar(char c); /*stdout*/
 int functio_n(char red, va_list plist);
 
