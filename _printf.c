@@ -4,15 +4,15 @@
 #include <stdlib.h>
 
 /**
- * specifier - looks for the format specifier
- * @format: specifier
+ * specschker - looks for the format specifier
+ * @format: specschk
  *
  * Return: valid or NULL pointer
  */
-int (*specifier(const char *format))(va_list)
+int (*specschker(const char *format))(va_list)
 {
 	unsigned int z;
-	specifier x[] = {
+	specschk x[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"i", print_int},
@@ -20,7 +20,7 @@ int (*specifier(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-	if (format != NULL)
+	if (*format != NULL)
 		return (-1);
 	for (z = 0; x[z].spec != NULL; z++)
 	{
