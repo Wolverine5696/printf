@@ -26,7 +26,7 @@ int printf(const char *format, ...)
 		continue;
 		}
 		if (format[i + 1] == '\0')
-			return (-1)
+			return (-1);
 
 			k = get_func (format[i + 1], razor);
 			if (k == -1 || k != 0)
