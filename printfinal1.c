@@ -19,8 +19,9 @@ int (*specifier(const char *format))(va_list)
 		{"d", print_int},
 		{NULL, NULL}
 	};
-	if (!format)
-		return (1);
+
+	if (format != NULL)
+		return (-1);
 	for (z = 0; x[z].spec != NULL; z++)
 	{
 		if (*(x[z].spec) == *format)
