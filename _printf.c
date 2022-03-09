@@ -1,60 +1,82 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdarg.h>
-#include <stddef.h>
-#include <unistd.h>
+#include <stdlib.h>
+
 /**
- * _printf - the function
- * @format: a list of arguments
- * @...: the ellisp with parameters
- * Description: this is a function that prints everything
- * Return: the characters expressed in the function.
+ * specifier - looks for the format specifier
+ * @format: specifier
+ *
+ * Return: valid or NULL pointer
+ */
+int (*specifier(const char *format))(va_list)
+{
+	unsigned int z;
+	specifier x[] = {
+		{"c", print_char},
+		{"s", print_string},
+		{"i", print_int},
+		{"d", print_int},
+		{NULL, NULL}
+	};
+
+	if (format != NULL)
+		return (-1);
+	for (z = 0; x[z].spec != NULL; z++)
+	{
+		if (*(x[z].spec) == *format)
+		{
+			break;
+		}
+	}
+	return (x[z].f);
+}
+/**
+ * _printf - prints format of the string
+ * @format: arguments in the string
+ *
+ * Return: prints arguments
  */
 int _printf(const char *format, ...)
 {
-	int chars;
-	va_list list;
+	len = 0, unsigned int k = 0;
 
-	va_start(list, *format);
-	if (format == NULL)
+	va_list razor;
+	int (*f)(va_list);
+
+	if (format == NULL || (format[0] == % &&format[1] == '\0'))
 		return (-1);
-
-	chars = charsFormats(list, format);
-
-	va_end(list);
-	return (chars);
+	va start(razor, format);
+	while (format[k])
+	{
+		for (; format[k] != '%' && format[k]; k++)
+			{
+			_putchar(format[k]), len++;
+			}
+		if (!format[k])
+			return (len);
+	if (format[k + 1] == '%')
+	{
+		_putchar('%');
+		k += 2, len = len + 1;
+	}
+	else if (format[k + 1] == '\0')
+	{
+		k++;
+		continue;
+	}
+	else
+	{
+		m = specifier(&format[k + 1]);
+	if (m == NULL)
+	{
+	_putchar(format[k]), _putchar(format[k + 1]);
+	k += 2, len = len + 2;
+	}
+	else
+	}
+	len = len + m(razor), k += 2;
+	}}}
+va_end(razor);
+return (len);
 }
-
-/**
- * charsFormats - parameter of printf
- * @format: list of args
- * @args: listing
- * Return: value of print
- */
-int charsFormats(const char *format, va_list args)
-	{
-	int i, j, chars, r_val;
-
-	specifier f_list[] = {
-		{"c", _char},
-		{"s", _string},
-		{"%", _percent},
-		{"d", _integer},
-		{"i", _integer}
-	};
-	chars = 0;
-	for (i = 0; format[i] != '\0'; i++)
-	{
-	if (format[i] == '%')
-	{
-	for (j = 0; f_list[j].sym != NULL; j++)
-		{
-	r_val = f_list[j].f(args);
-	if (r_val == -1)
-	return (-1);
-	chars += r_val;
-	break;
-		}
-	}
-return (0);
-	}
-	}
