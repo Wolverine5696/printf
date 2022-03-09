@@ -6,7 +6,7 @@
  */
 int printf(const char *format, ...)
 {
-         int k, j, = 0;
+         int k, j = 0;
 	unsigned int i;
 	va_list razor;
 
