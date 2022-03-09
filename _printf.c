@@ -21,7 +21,7 @@ int (*specifier(const char *format))(va_list)
 	};
 
 	if (format != NULL)
-		return(1);
+
 	for (z = 0; x[z].red != NULL; z++)
 	{
 		if (*(x[z].red) == *format)
@@ -39,7 +39,7 @@ int (*specifier(const char *format))(va_list)
  */
 int _printf(const char *format, ...)    
 {
-	length = 0; unsigned int z = 0;
+	int length = 0; unsigned int z = 0;
 
 	va_list razor;
 	int (*f)(va_list);
@@ -79,4 +79,5 @@ int _printf(const char *format, ...)
 	}}
 va_end(razor);
 return (length);
+}
 }
