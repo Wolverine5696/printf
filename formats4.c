@@ -5,18 +5,14 @@
  * @plist: va list
  * Return: function that prints the function
  */
-int functio_n(char red, va_list plist)
+int print_ints(va_list plist)
 {
 	int i;
-
 	int array[2] = {d, i};
 
-	int array[3] = j;
-
-
-	functio_n[] = {
-		{"d", print_integer},
-		{"i", print_integer},
+	_[] = {
+		{'d', print_integer},
+		{'i', print_integer},
 		{NULL, NULL}
 	};
 
