@@ -20,8 +20,8 @@ int (*specschker(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-	if (*format != NULL)
-		return (-1);
+	if (!format)
+		exit(99);
 	for (z = 0; x[z].spec != NULL; z++)
 	{
 		if (*(x[z].spec) == *format)
