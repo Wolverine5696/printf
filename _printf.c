@@ -4,15 +4,15 @@
 #include <stdlib.h>
 
 /**
- * specschker - looks for the format specifier
- * @format: specschk
+ * specifier - looks for the format specifier
+ * @format: possible format for the struct
  *
  * Return: valid or NULL pointer
  */
-int (*specschker(const char *format))(va_list)
+int (*specifier(const char *format))(va_list)
 {
 	unsigned int z;
-	specschk x[] = {
+	blue x[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"i", print_int},
@@ -20,11 +20,11 @@ int (*specschker(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-	if (!format)
-		exit(99);
-	for (z = 0; x[z].spec != NULL; z++)
+	if (format != NULL)
+		return(1);
+	for (z = 0; x[z].red != NULL; z++)
 	{
-		if (*(x[z].spec) == *format)
+		if (*(x[z].red) == *format)
 		{
 			break;
 		}
@@ -37,46 +37,46 @@ int (*specschker(const char *format))(va_list)
  *
  * Return: prints arguments
  */
-int _printf(const char *format, ...)
+int _printf(const char *format, ...)    
 {
-	len = 0, unsigned int k = 0;
+	length = 0; unsigned int z = 0;
 
 	va_list razor;
 	int (*f)(va_list);
 
-	if (format == NULL || (format[0] == % &&format[1] == '\0'))
+	if (format == NULL || (format[0] == '%' &&format[1] == '\0'))
 		return (-1);
-	va start(razor, format);
-	while (format[k])
+	va_start(razor, format);
+	while (format[z])
 	{
-		for (; format[k] != '%' && format[k]; k++)
+		for (; format[z] != '%' && format[z]; z++)
 			{
-			_putchar(format[k]), len++;
+				_putchar(format[z]); length++;
 			}
-		if (!format[k])
-			return (len);
-	if (format[k + 1] == '%')
+		if (!format[z])
+			return (length);
+	if (format[z + 1] == '%')
 	{
 		_putchar('%');
-		k += 2, len = len + 1;
+		z += 2; length = length + 1;
 	}
-	else if (format[k + 1] == '\0')
+	else if (format[z + 1] == '\0')
 	{
-		k++;
+		z++;
 		continue;
 	}
 	else
 	{
-		m = specifier(&format[k + 1]);
-	if (m == NULL)
+		f = specifier(&format[z + 1]);
+	if (f == NULL)
 	{
-	_putchar(format[k]), _putchar(format[k + 1]);
-	k += 2, len = len + 2;
+	_putchar(format[z]); _putchar(format[z + 1]);
+	z += 2; length = length + 2;
 	}
 	else
-	}
-	len = len + m(razor), k += 2;
-	}}}
+	{
+	length = length + f(razor); z += 2;
+	}}
 va_end(razor);
-return (len);
+return (length);
 }

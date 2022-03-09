@@ -6,19 +6,19 @@
 #include <stdlib.h>
 #include <unistd.h>
 /**
- * struct razor - devines a structure for symbols and functions
- * @sym: the oporator
+ * struct print - devines a structure for symbols and functions
+ * @red: print struct
  * @f: the function
  * _putchar: prints a single character in a string/array
  * _int: prints integer
  * _percent: utilizes percent
  */
 
-typedef struct print specschk
+typedef struct print 
 {
-	char *spec;
+	char *red;
 	int (*f)(va_list);
-};
+} blue;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -29,7 +29,7 @@ int print_int(va_list i);
 /* printf function*/
 
 int _printf(const char *format, ...);
-int (*specschker(const char *format))(va_list);
+int (*specifier(const char *format))(va_list);
 int _putchar(char c); /*stdout*/
 int functio_n(char red, va_list plist);
 
@@ -47,6 +47,5 @@ int _percent(va_list list); /* print_% */
 int _int(va_list arg); /*print integers*/
 
 int _strcmp(char s1, char *s2);
-int _prnthex(va_list *args);
 
 #endif
