@@ -4,15 +4,15 @@
 #include <stdlib.h>
 
 /**
- * specschker - looks for the format specifier
- * @format: specschk
+ * specifier - looks for the format specifier
+ * @format: specifier
  *
  * Return: valid or NULL pointer
  */
-int (*specschker(const char *format))(va_list)
+int (*specifier(const char *format))(va_list)
 {
-	unsigned int z;
-	specschk x[] = {
+	unsigned int z, x;
+	specifier; x[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"i", print_int},
@@ -20,8 +20,8 @@ int (*specschker(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-	if (!format)
-		exit(99);
+	if (format != NULL)
+		return (-1);
 	for (z = 0; x[z].spec != NULL; z++)
 	{
 		if (*(x[z].spec) == *format)
@@ -46,7 +46,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL || (format[0] == % &&format[1] == '\0'))
 		return (-1);
-	va start(razor, format);
+	va_start(razor, format);
 	while (format[k])
 	{
 		for (; format[k] != '%' && format[k]; k++)

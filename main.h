@@ -14,11 +14,11 @@
  * _percent: utilizes percent
  */
 
-typedef struct print
+typedef struct print specschk
 {
 	char *spec;
 	int (*f)(va_list);
-} specifier;
+};
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -29,7 +29,7 @@ int print_int(va_list i);
 /* printf function*/
 
 int _printf(const char *format, ...);
-int (*specifier(const char *format))(va_list);
+int (*specschker(const char *format))(va_list);
 int _putchar(char c); /*stdout*/
 int functio_n(char red, va_list plist);
 
