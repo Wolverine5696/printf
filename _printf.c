@@ -38,13 +38,13 @@ int (*specifier(const char *format))(va_list)
  * Return: prints arguments
  */
 int _printf(const char *format, ...)
-{		
+{
 	int length = 0; unsigned int z = 0;
 
 	va_list razor;
 	int (*f)(va_list);
 
-	if (format == NULL || (format[0] == '%' &&format[1] == '\0'))
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 	va_start(razor, format);
 	while (format[z])
