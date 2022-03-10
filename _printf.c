@@ -21,7 +21,7 @@ int (*specifier(const char *format))(va_list)
 	};
 
 	if (format != NULL)
-
+	return(1);
 	for (z = 0; x[z].red != NULL; z++)
 	{
 		if (*(x[z].red) == *format)
