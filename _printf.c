@@ -20,8 +20,8 @@ int (*specifier(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-	if (format != NULL)
-	return(1);
+	if (!format)
+		exit(99);
 	for (z = 0; x[z].red != NULL; z++)
 	{
 		if (*(x[z].red) == *format)
@@ -37,8 +37,8 @@ int (*specifier(const char *format))(va_list)
  *
  * Return: prints arguments
  */
-int _printf(const char *format, ...)    
-{
+int _printf(const char *format, ...)
+{		
 	int length = 0; unsigned int z = 0;
 
 	va_list razor;
