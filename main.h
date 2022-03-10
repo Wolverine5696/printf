@@ -12,7 +12,10 @@
  * _putchar: prints a single character in a string/array
  * _int: prints integer
  * _percent: utilizes percent
- */
+ * print_int: print integers
+ * print_char: print character
+ * print_string: print string
+*/
 
 typedef struct print 
 {
