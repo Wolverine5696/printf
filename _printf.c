@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-
+#include "printcallfunctions.c"
 /**
  * specifier - looks for the format specifier
  * @format: possible format for the struct
