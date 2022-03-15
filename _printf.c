@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-
+#include "printcallfunctions.c"
 /**
  * specifier - looks for the format specifier
  * @format: possible format for the struct
@@ -39,26 +39,26 @@ int (*specifier(const char *format))(va_list)
  */
 int _printf(const char *format, ...)
 {
-	int length = 0; unsigned int z = 0;
-
+	unsigned int z = 0, length = 0;
 	va_list razor;
 	int (*f)(va_list);
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
+	return (-1);
 	va_start(razor, format);
 	while (format[z])
 	{
 		for (; format[z] != '%' && format[z]; z++)
-			{
-				_putchar(format[z]); length++;
-			}
+		{
+			_putchar(format[z]);
+				length++;
+		}
 		if (!format[z])
 			return (length);
-	if (format[z + 1] == '%')
+		if (format[z + 1] == '%')
 	{
 		_putchar('%');
-		z += 2; length = length + 1;
+		z += 2, length = length + 1;
 	}
 	else if (format[z + 1] == '\0')
 	{
@@ -70,14 +70,13 @@ int _printf(const char *format, ...)
 		f = specifier(&format[z + 1]);
 	if (f == NULL)
 	{
-	_putchar(format[z]); _putchar(format[z + 1]);
-	z += 2; length = length + 2;
+	_putchar(format[z]), _putchar(format[z + 1]);
+	z += 2, length = length + 2;
 	}
 	else
 	{
-	length = length + f(razor); z += 2;
-	}}
+	length = length + f(razor), z += 2;
+	}}}
 va_end(razor);
 return (length);
-}
 }
