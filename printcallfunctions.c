@@ -1,71 +1,75 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_int - prints an integer
+ * printInt - prints an integer
  * @i: integer to print
  *
  * Return: number of chars and digits printed
  */
-int print_int(va_list i)
+int printInt(va_list args)
 {
-	int f = va_arg(i, int);
-	unsigned int length = 0, modulo = 1;
-	/*putchars a '-' for negative numbers*/
-
-	if (f < 0)
-	{
-		_putchar('-');
-		f = f * -1;
-		length++;
-	}
-	/*printing 1 int at a time with putchar?*/
-
-	while ((f / modulo) >= 10)
-	{
-		modulo = modulo * 10;
-	}
-	while (modulo >= 1)
-	{
-		_putchar((f / modulo) + '0');
-		f = f % modulo;
-		modulo = modulo / 10;
-		length++;
-	}
-	return (length);
+	char oz[33];
+	char *str;
+	int num = va_arg(args, int);
+	int size;
+	str = itoa(num, oz, 10);
+	size = _strlen(str);
+	return (write(1, str, size));
 }
 
 /**
- * print_char - prints a character with _putchar to stdout.
+ * printChar - prints a character with _putchar to stdout.
  * @c: character to print
  *
  * Return: always 1
  */
 
-int print_char(va_list c)
+int printChar(va_list args)
 {
-	/* protect against null character */
-	if (!c)
-		exit(1);
-	_putchar((char)va_arg(c, int));
-	return (1);
+	char c = va_arg(args, int);
+	return (write(1, &c, 1));
 }
 
 /**
- * print_string - prints a string of characters
+ * printString - prints a string of characters
  * @s: string to print
  *
  * Return: number of characters printed
  */
-int print_string(va_list s)
+int printString(va_list args)
 {
-	int len;
-	char *str = va_arg(s, char *);
+	char *str = va_arg(args, char *);
+	int size;
 
-	if (str == NULL)
+	if (str = NULL)
 		str = "(null)";
-	for (len = 0; str[len]; len++)
-	{
-		_putchar(str[len]);
-	}
-	return (len);
+	size = _strlen(str);
+	return (write(1, str, size));
+}
+
+/**
+ * printPercent - percent
+ * @args: passes args
+ * Return: data length
+ */
+int printPercent(va_list args)
+{
+	char p = '%';
+	(void) args;
+	return (write(1, &p, 1));
+}
+
+
+/**
+ * _strlen - count chars
+ * @s: string
+ * Return: length
+ */
+int _strlen(const char *s)
+{
+	int i = 0;
+	while (s[i] != '\0')
+		i++;
+
+	return (i);
 }

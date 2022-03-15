@@ -25,30 +25,9 @@ typedef struct print
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_char(va_list c);
-int print_string(va_list s);
-int print_int(va_list i);
-
-/* printf function*/
-
-int _printf(const char *format, ...);
-int (*specifier(const char *format))(va_list);
-int _putchar(char c); /*stdout*/
-int functio_n(char red, va_list plist);
-
-/*character functions*/
-int _write_char(char);
-int print_char(va_list);
-int print_string(va_list);
-int print_percent(va_list);
-int print_integer(va_list);
-int print_number(va_list);
-int print_binary(va_list);
-int _char(va_list c);
-int _string(va_list s);
-int _percent(va_list list); /* print_% */
-int _int(va_list arg); /*print integers*/
-
-int _strcmp(char s1, char *s2);
-
+int _strlen(const char *s);
+char *_strcpy(char *dest, char *src);
+void rev_string(char *s);
+int _abs(int n);
+char *itoa(int value, char *buffer, int base);
 #endif
