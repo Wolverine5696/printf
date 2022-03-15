@@ -41,7 +41,7 @@ int printString(va_list args)
 	char *str = va_arg(args, char *);
 	int size;
 
-	if (str = NULL)
+	if ((str = NULL))
 		str = "(null)";
 	size = _strlen(str);
 	return (write(1, str, size));
