@@ -8,14 +8,14 @@
  */
 int print_int(va_list i)
 {
-	int f = va_arg(i, int);
+	int x = va_arg(i, int);
 	unsigned int length = 0, modulo = 1;
 	/*putchars a '-' for negative numbers*/
 
-	if (f < 0)
+	if (x < 0)
 	{
 		_putchar('-');
-		f = f * -1;
+		x = x * -1;
 		length++;
 	}
 	/*printing 1 int at a time with putchar?*/
@@ -27,7 +27,7 @@ int print_int(va_list i)
 	while (modulo >= 1)
 	{
 		_putchar((f / modulo) + '0');
-		f = f % modulo;
+		x = x % modulo;
 		modulo = modulo / 10;
 		length++;
 	}
@@ -59,13 +59,13 @@ int print_char(va_list c)
 int print_string(va_list s)
 {
 	int len;
-	char *str = va_arg(s, char *);
+	char *stx = va_arg(s, char *);
 
-	if (str == NULL)
-		str = "(null)";
-	for (len = 0; str[len]; len++)
+	if (stx == NULL)
+		stx = "(null)";
+	for (len = 0; stx[len]; len++)
 	{
-		_putchar(str[len]);
+		_putchar(stx[len]);
 	}
 	return (len);
 }
