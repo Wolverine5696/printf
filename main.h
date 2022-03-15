@@ -20,7 +20,7 @@
 typedef struct print 
 {
 	char *red;
-	int (*f)(va_list);
+	int (*f)();
 } blue;
 
 int _putchar(char c);
