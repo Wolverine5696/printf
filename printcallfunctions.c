@@ -20,7 +20,7 @@ int print_int(va_list i)
 	}
 	/*printing 1 int at a time with putchar?*/
 
-	while ((f / modulo) >= 10)
+	while ((x / modulo) >= 10)
 	{
 		modulo = modulo * 10;
 	}
