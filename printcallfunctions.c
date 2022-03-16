@@ -26,7 +26,7 @@ int print_int(va_list i)
 	}
 	while (modulo >= 1)
 	{
-		_putchar((f / modulo) + '0');
+		_putchar((x / modulo) + '0');
 		x = x % modulo;
 		modulo = modulo / 10;
 		length++;
